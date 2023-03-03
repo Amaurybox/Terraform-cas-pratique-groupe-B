@@ -5,6 +5,12 @@ terraform {
       version = "=3.0.0"
     }
   }
+  backend "azurerm" {
+    resource_group_name  = "RG-GroupeB"
+    storage_account_name = "storagegroupeb"
+    container_name       = "tfstate"
+    key                  = "infra.tfstate"
+  }
 }
 
 provider "azurerm" {
@@ -12,12 +18,6 @@ provider "azurerm" {
   # subscription_id : "Ecole By Cap"
   subscription_id = "a177ac1b-f0e1-45e5-a6c4-80266ff85e1d"
 }
-
-resource "azurerm_resource_group" "GroupeB" {
-  name     = "RG-GroupeB"
-  location = "West Europe"
-}
-
 
 
 
