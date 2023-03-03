@@ -1,0 +1,113 @@
+1ere etape 
+sur votre laptop
+pre requis
+- acces internet
+- souscription azure active
+- terraform et git installé (optionnel vscode(vscodium) avec le plugin terraform)
+
+
+
+- creez une souscription github au nom du groupe auquel vous appartenez et communiquez aux membres du groupe
+    "create repository" 
+    parametres :
+        mode public
+        gitignore template de type terraform
+- 
+- faites un git clone de votre repos de groupe sur votre laptop 
+- verifiez le contenu du repertoire créé par git clone
+
+personnalizez votre git avec votre nom et votre email :
+commandes :
+git config --global user.name "FIRST_NAME LAST_NAME"
+git config --global user.email "MY_NAME@example.com"
+verifiez l'enregistrement dans la base de donnees git locale : 
+    git config -l 
+
+
+utilisez l'authentification CLI pour vous connecter sur votrecompte azure avec terraform
+(deja vu dans le cours)
+
+etape 1 : 
+
+    creez les fichiers definissant le provider et l'acces au compte sous terraform
+
+
+    verifier le bon fonctionnement de la config terraform
+
+    terraform init, etc....
+    n oubliez ps d'initialiser le .gitignore !
+    pousser sur github ( avec le bon process (git status, add, commit, push,  ))
+    verifier avec l'interface web du github que les fichiers ont ete poussés...
+
+    y a t il eu des conflits de version ? utiliser le 'git pull, git push' pour resoudre les conflits 
+
+    conclusions ?
+
+
+
+
+liens de la doc terraform : https://developer.hashicorp.com/terraform/language/settings/backends/azurerm
+
+mots clefs : provider, backend,  git push pull commit
+
+
+
+
+
+2eme etape
+
+
+    creez un compte de stockage sur azure par groupe 
+    https://learn.microsoft.com/fr-fr/azure/developer/terraform/store-state-in-azure-storage?tabs=terraform
+
+
+    redefinissez le backend du state avec ce stockage :
+    fichier "backend_azurerm_stockage.example"
+
+    et retestez sous terraform
+
+    observez le changement de l'etat du state
+
+    l utilisation est elle automatique ?
+    que devez vous faire?
+
+    (pensez a faire un init sous TF mais pas que....)
+
+
+    mots clefs azurerm storage_account_name 
+
+    poussez la nouvelle configuration sous github
+
+    faites le avec plusieurs users du groupe
+    conclusions ?
+
+2eme etape
+
+definissez une infrastructure PAR GROUPE avec des vms PAR USER du groupe
+
+utilisez les fichiers d'exemple TF transmis lors du 1er jour
+
+quelle structure adoptez vous ?
+
+multipliez vous les configs?
+
+comment ne pas generer de conflit?
+
+- nomage, repertoire ?
+
+3eme etape
+comment pouvez vous transformer votre configuration pour utiliser des modules?
+ a chaque fois synchronisez sur github
+
+
+
+
+
+
+
+
+
+
+
+
+3 eme etape
