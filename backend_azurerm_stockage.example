@@ -1,0 +1,24 @@
+terraform {
+  required_providers {
+    azurerm = {
+      source = "hashicorp/azurerm"
+      version = ">=3.0"
+    }
+  }
+  backend "azurerm" {
+    resource_group_name = "RG-example-groupe1"
+    storage_account_name = "storageXXXXXXXX"
+    container_name = "tfstate"
+    key = "infra.tfstate"
+  }
+}
+
+provider "azurerm" {
+  features {}
+
+  subscription_id = "XXXXX"
+  client_id       = "XXXX"
+  client_secret   = "XXXX"
+  tenant_id       = "XXX"
+
+}
