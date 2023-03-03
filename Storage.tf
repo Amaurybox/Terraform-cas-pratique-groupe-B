@@ -6,7 +6,7 @@ resource "random_string" "resource_code" {
 
 resource "azurerm_resource_group" "tfstate" {
   name     = "tfstate"
-  location = "East US"
+  location = "westeurope"
 }
 
 resource "azurerm_storage_account" "tfstate" {
