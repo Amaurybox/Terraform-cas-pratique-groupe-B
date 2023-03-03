@@ -15,3 +15,9 @@ resource "azurerm_storage_account" "GroupeB" {
     Group = "B"
   }
 }
+
+resource "azurerm_storage_container" "tfstate" {
+  name                  = "tfstate"
+  storage_account_name  = azurerm_storage_account.GroupeB.name
+  container_access_type = "private"
+}
