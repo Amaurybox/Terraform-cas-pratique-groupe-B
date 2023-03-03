@@ -13,11 +13,6 @@ provider "azurerm" {
   subscription_id = "a177ac1b-f0e1-45e5-a6c4-80266ff85e1d"
 }
 
-resource "azurerm_resource_group" "GroupeB" {
-  name     = "RG-GroupeB"
-  location = "West Europe"
-}
-
 
 
 
