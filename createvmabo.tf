@@ -17,6 +17,6 @@ module "virtual-machine" {
   linux_distribution_name = "ubuntu2004"
   virtual_machine_size    = "Standard_B2s"
   generate_admin_ssh_key  = true
-  instances_count         = 2
+  instances_count         = 1
   enable_public_ip_address = false
 }
